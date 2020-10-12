@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Login -- Student Assistor</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      * {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #354152;
+  color: #7e8ba3;
+  font: 300 1rem/1.5 Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100%;
+}
+
+.align {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.align__item--start {
+  align-self: flex-start;
+}
+.align__item--end {
+  align-self: flex-end;
+}
+
+.site__logo {
+  margin-bottom: 2rem;
+}
+
+input {
+  border: 0;
+  font: inherit;
+}
+input::placeholder {
+  color: #7e8ba3;
+}
+
+.form__field {
+  margin-bottom: 1rem;
+}
+.form input {
+  outline: 0;
+  padding: .5rem 1rem;
+}
+.form input[type="text"], .form input[type="password"] {
+  width: 100%;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;
+}
+
+.student-assistor-logo {
+  font-size: 2.75rem;
+  font-weight: 100;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: #7e8ba3;
+}
+
+.register {
+  box-shadow: 0 0 250px #000;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.register input {
+  border: 2px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+}
+.register input[type="text"], .register input[type="password"] {
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 1rem 50%;
+  text-align: left;
+}
+
+.register input[type="submit"] {
+  background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
+  color: #fff;
+  margin-bottom: 6rem;
+  width: 100%;
+  text-align: center;
+}
+
+  </style>
+
+</head>
+
+<body class="align">
+
+  <div class="grid align__item">
+
+    <div class="register">
+
+      
+
+      <h2 class="student-assistor-logo">Student Assistor</h2>
+
+      <form action="" method="POST" class="form"> {% csrf_token %}
+
+        <div class="form__field">
+          <input type="text" name="username" placeholder="Username">
+        </div>
+
+        <div class="form__field">
+          <input type="password" name="password"  placeholder="Password">
+        </div>
+
+        <div class="form__field">
+          <input type="submit" value="Login">
+        </div>
+
+      </form>
+      {% for message in messages %}
+				<p id="messages">{{message}}</p>
+	    {% endfor %}
+      <p>Don't have an account? <a href="{% url 'signup' %}" class="ml-2">Sign Up</a></p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
