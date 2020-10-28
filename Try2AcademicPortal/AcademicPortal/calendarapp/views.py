@@ -61,7 +61,7 @@ def create_event(request):
         end_time = form.cleaned_data['end_time']
         Event.objects.get_or_create(
             user=request.user,
-            username=request.user,
+            username=request.user.username,
             title=title,
             description=description,
             start_time=start_time,
