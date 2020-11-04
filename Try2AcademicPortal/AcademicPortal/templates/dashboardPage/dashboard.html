@@ -27,7 +27,7 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{% static "plugins/summernote/summernote-bs4.min.css" %}">
 
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Bootstrap CSS for calendar app-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
@@ -114,10 +114,10 @@
 
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'fileuploadapp:upload'%}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Assignments
+                Upload File
               </p>
             </a>
           </li>
