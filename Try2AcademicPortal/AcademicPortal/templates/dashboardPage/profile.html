@@ -1,0 +1,182 @@
+{% extends 'dashboardPage/dashboard.html' %}
+{% load static %}
+{% block content %}
+{% block WelcomeMessage %}
+{% endblock %}
+<div class="col-md-9 personal-info">
+        <h2><nbsp>Profile</h2>
+</div>
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="{% static avatar %}" alt=""/>
+                    <div class="file btn btn-lg btn-primary">
+                        <!--input type="file" name="file"/-->
+                        .
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                            <h5>
+                               {{name}}
+                            </h5>
+                            <h6>
+                                Student
+                            </h6>
+                            <br><br><br><br><br>
+                            <!--p class="proile-rating">RANKINGS : <span>8/10</span></p-->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Subjects</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!--input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/-->
+                <a class="btn btn-outline-info  btn-sm btn-block"  href="{%url 'dashboard:update_profile' %}">Edit Profile</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>WORK LINK</p>
+                    <a href="{{website}}">Website Link</a><br/>
+                    <a href="{{linked}}">LinkedIn Profile</a><br/>
+                    <a href="{{github}}">Github Profile</a>
+                    <p>SKILLS</p>
+                    <a href="">Web Designer</a><br/>
+                    <a href="">Web Developer</a><br/>
+                    <a href="">Python</a><br/>
+                    <a href="">C Programming</a><br/>
+                    <a href="">Java Programming</a><br/>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>USN</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{usn}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Name</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{name}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Sex</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{sex}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{email}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Branch</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{branch}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Semester</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{semester}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Bio</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{bio}}</p>
+                                    </div>
+                                </div>
+                                
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Course 1</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{course1}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Course 2</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{course2}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Course 3</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{course3}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Course 4</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{course4}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Course 5</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{course5}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Course 6</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{course6}}</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>           
+</div>
+{% block scripts %}
+<script type="text/javascript" src="{% static 'plugins/jquery/jquery-3.5.1.min.js' %}"></script>
+{% endblock %}
+
+{% endblock %}
