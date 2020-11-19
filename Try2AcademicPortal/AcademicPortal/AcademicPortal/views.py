@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib import messages
 
+from dashboard.models import Student,Personal
+
 from .forms import SignUpForm
 
 def signup_view(request):
@@ -14,9 +16,12 @@ def signup_view(request):
 		if request.method == 'POST':
 			form = SignUpForm(request.POST)
 			if form.is_valid():
-				form.save()
-				user = form.cleaned_data.get('username')
-				messages.success(request, 'Account was created for ' + user)
+				user= form.save()
+				username = form.cleaned_data.get('username')
+				email = form.cleaned_data.get('email')
+				Student.objects.create(user = user,email = email)
+				Personal.objects.create(user = user,avatar='dist/img/avatar5.png')
+				messages.success(request, 'Account was created for ' + username)
 
 				return redirect('login')
 		content = {'form':form}
