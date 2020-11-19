@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 {% block WelcomeMessage %}
-{% endblock %}
+{% endblock WelcomeMessage %}
 <div class="col-md-9 personal-info">
         <h2><nbsp>Profile</h2>
 </div>
@@ -177,6 +177,6 @@
 </div>
 {% block scripts %}
 <script type="text/javascript" src="{% static 'plugins/jquery/jquery-3.5.1.min.js' %}"></script>
-{% endblock %}
+{% endblock scripts%}
 
-{% endblock %}
+{% endblock content%}
