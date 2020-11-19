@@ -1,5 +1,5 @@
 # StudentAssistor
-Python Mini Project using Django/Tkinter.
+Python Mini Project using Django
 
 Goal of the Application:
 A simple Application which handles/records person's day-to-day works. 
@@ -10,7 +10,6 @@ Features of the Application:
 -- Schedule (TT)
 -- Upcoming Assignments
 -- Teacher list
--- Course related E-book (Give names and assistant download for you)
 -- To do list
 -- Attendance manager
 -- Syllabus
