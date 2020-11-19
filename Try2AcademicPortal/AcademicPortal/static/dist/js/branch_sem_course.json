@@ -1,0 +1,144 @@
+[
+    {
+     "id":"1",
+     "name":"Computer Science & Technology",
+     "parent_id":"0"
+    }, 
+    {
+     "id":"2",
+     "name":"Computer Science & Engineering",
+     "parent_id":"0"
+    }, 
+    {
+     "id":"3",
+     "name":"BCA",
+     "parent_id":"0"
+    }, 
+    {
+     "id":"4",
+     "name":"Semester 1",
+     "parent_id":"1"
+    }, 
+    {
+     "id":"5",
+     "name":"Semester 2",
+     "parent_id":"1"
+    }, 
+    {
+     "id":"6",
+     "name":"Semester 3",
+     "parent_id":"1"
+    }, 
+    {
+     "id":"7",
+     "name":"Semester 4",
+     "parent_id":"1"
+    }, 
+    {
+     "id":"8",
+     "name":"Semester 1",
+     "parent_id":"2"
+    }, 
+    {
+     "id":"9",
+     "name":"Semester 2",
+     "parent_id":"2"
+    }, 
+    {
+     "id":"10",
+     "name":"Semester 1",
+     "parent_id":"3"
+    }, 
+    {
+     "id":"11",
+     "name":"Semester 2",
+     "parent_id":"3"
+    }, 
+    {
+     "id":"12",
+     "name":"M1",
+     "parent_id":"4"
+    }, 
+    {
+     "id":"13",
+     "name":"CPPS",
+     "parent_id":"4"
+    }, 
+    {
+     "id":"14",
+     "name":"Chemistry",
+     "parent_id":"4"
+    }, 
+    {
+     "id":"15",
+     "name":"M2",
+     "parent_id":"5"
+    }, 
+    {
+     "id":"16",
+     "name":"Physics",
+     "parent_id":"5"
+    }, 
+    {
+     "id":"17",
+     "name":"Electronic Circuits",
+     "parent_id":"5"
+    }, 
+    {
+     "id":"18",
+     "name":"M3",
+     "parent_id":"6"
+    }, 
+    {
+     "id":"19",
+     "name":"DSA",
+     "parent_id":"6"
+    }, 
+    {
+     "id":"20",
+     "name":"Python",
+     "parent_id":"6"
+    }, 
+    {
+     "id":"21",
+     "name":"Discrete Maths",
+     "parent_id":"7"
+    }, 
+    {
+     "id":"22",
+     "name":"Algorithms",
+     "parent_id":"7"
+    }, 
+    {
+     "id":"23",
+     "name":"M1(CSE)",
+     "parent_id":"8"
+    }, 
+    {
+     "id":"24",
+     "name":"CPPS(CSE)",
+     "parent_id":"8"
+    }, 
+    {
+     "id":"25",
+     "name":"M2(CSE)",
+     "parent_id":"9"
+    }, 
+    {
+     "id":"26",
+     "name":"EC(CSE)",
+     "parent_id":"9"
+    }, 
+    {
+     "id":"27",
+     "name":"M1(BCA)",
+     "parent_id":"10"
+    }, 
+    {
+     "id":"28",
+     "name":"Constitution of India(BCA)",
+     "parent_id":"10"
+    }
+   ]
+   
+   
