@@ -1,5 +1,9 @@
 {% extends 'dashboardPage/dashboard.html' %}
 
+{%block title%}
+  Student Portal | Calendar
+  {%endblock%}
+
 {% block content %}
 <div class="clearfix" bac>
     <span class="left m-2" style="font-size: 20px;">Welcome, {{ request.user.username }}</span>
