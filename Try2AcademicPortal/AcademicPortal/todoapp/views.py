@@ -10,14 +10,24 @@ from .forms import *
 # Create your views here.
 @login_required(login_url='login')
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(username=request.user.username)
 
     form = TaskForm()
 
     if request.method == 'POST':
         form = TaskForm(request.POST)
-        if form.is_valid():
-            form.save()
+        if request.POST and form.is_valid():
+            title = form.cleaned_data['title']
+            complete = form.cleaned_data['complete']
+        
+        
+        Task.objects.get_or_create(
+            
+            username=request.user.username,
+            title=title,
+            complete=complete,
+            
+        )
         return redirect('todoapp:list')
 
     context = {'tasks': tasks, 'form': form}
