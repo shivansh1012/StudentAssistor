@@ -1,43 +1,46 @@
 {% extends 'dashboardPage/dashboard.html' %}
 
 {%block title%}
-  Student Portal | Upload File
-  {%endblock%}
-	{%block content%}
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-12">
-				<p>
-					<a href="{% url 'fileuploadapp:home' %}" class="btn btn-primary">Upload</a>
-				</p>
-				<table class="table">
-						  <thead class="thead-dark">
-						    <tr>
-						      <th >S.No</th>
-						      <th >Name</th>
-						      <th >File Link</th>
-						      <th>Delete</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						  	 {% for d in data %}
+Student Portal | Upload File
+{%endblock%}
 
-						  	<tr>
-						  		
-						  		<th>{{forloop.counter}}</th>
-						  		<th>{{d.file_name}}</th>
-						  		<th><a href="{{d.my_file.url}}">{{d.my_file}}</a></th>
+{% block welcome %}
+{% endblock welcome %}
+{%block content%}
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-12">
+			<p>
+				<a href="{% url 'fileuploadapp:home' %}" class="btn btn-primary">Upload</a>
+			</p>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th>S.No</th>
+						<th>Name</th>
+						<th>File Link</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for d in data %}
 
-						  		<th>
-						  			<form method="post" action="{% url 'fileuploadapp:delete_book' d.pk %}">
-						  				{% csrf_token %}
-						  			<button type="submit" class="btn btn-danger btn-sm">Delete</button>
-						  			</form>
-						  		</th>
-						  	</tr>
-						  	{% endfor %}
-				</table>
-			</div>
+					<tr>
+
+						<th>{{forloop.counter}}</th>
+						<th>{{d.file_name}}</th>
+						<th><a href="{{d.my_file.url}}">{{d.my_file}}</a></th>
+
+						<th>
+							<form method="post" action="{% url 'fileuploadapp:delete_book' d.pk %}">
+								{% csrf_token %}
+								<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+							</form>
+						</th>
+					</tr>
+					{% endfor %}
+			</table>
 		</div>
 	</div>
-	{%endblock%}
+</div>
+{%endblock%}
