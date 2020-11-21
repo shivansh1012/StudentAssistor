@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class file_upload(models.Model):
 	ids=models.AutoField(primary_key=True)
+	username=models.CharField(max_length=200,editable=False)
 	file_name=models.CharField(max_length=255)
 	my_file=models.FileField(upload_to='')
 

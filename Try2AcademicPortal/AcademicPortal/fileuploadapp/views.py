@@ -7,18 +7,19 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='login')
 def index(request):
 	if request.method=='POST':
-		form= MyfileUploadForm(request.POST, request.FILES)
-
-		if form.is_valid():
-			name=form.cleaned_data['file_name']
-			files=form.cleaned_data['files_data']
-
-			file_upload(file_name=name,my_file=files).save()
+		form= MyfileUploadForm(request.POST, request.FILES)	
+		if request.POST and form.is_valid():
+			file_name=form.cleaned_data['file_name']
+			my_file=form.cleaned_data['files_data']	
+			file_upload.objects.get_or_create(
+	            username=request.user.username,
+				file_name= file_name,
+				my_file= my_file,
+	        )
 
 			return redirect('fileuploadapp:upload')
 		else:
 			return HttpResponse('ERROR')
-
 	else:
 
 		context={
@@ -27,7 +28,7 @@ def index(request):
 		return render(request,'fileuploadapp/index.html',context)
 @login_required(login_url='login')
 def show_file(request):
-	all_data=file_upload.objects.all()
+	all_data=file_upload.objects.filter(username=request.user.username)
 
 	context={
 		'data':all_data
