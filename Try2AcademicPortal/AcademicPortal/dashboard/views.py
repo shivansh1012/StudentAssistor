@@ -123,4 +123,4 @@ def aboutus(request):
         'username':request.user.get_username(),
         'avatar' : avatar,
     }
-    return render(request, 'dashboardPage/aboutus.html', content)
+    return render(request, 'dashboardPage/aboutus2.html', content)

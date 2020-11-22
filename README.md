@@ -1,20 +1,15 @@
 # StudentAssistor
-Python Mini Project using Django/Tkinter.
-
-Goal of the Application:
-A simple Application which handles/records person's day-to-day works. 
-Making it easy to access the schedules and get reminders for pending assignment.
+Student Portal using Django.
 
 Features of the Application:
--- Log in page
--- Schedule (TT)
--- Upcoming Assignments
--- Teacher list
--- Course related E-book (Give names and assistant download for you)
--- To do list
--- Attendance manager
--- Syllabus
--- Calender
+-- LogIn/Register page
+-- User Settings
+-- Dashboard
+-- Calendar
+-- To-Do List
+-- File Upload
+-- Social DocHub
+-- About Us
 
 Collaborators/Team Members:
 -- Anand Singh Tanwar
