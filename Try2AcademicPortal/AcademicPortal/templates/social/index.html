@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Student Portal | Social
+  </title>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="/static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
+
+</head>
+<body>
+  <div class="text-center">
+    <br>
+  <h4 style="align-self: center;">Social Page</h4>
+  <hr>
+</div>  
+  <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      
+{% block content %}
+  <div class="container mt-5">
+    <br>
+    <form enctype="multipart/form-data" action="{% url 'social:home' %}" method="POST">
+
+      <div class="form-group">
+        <label for="{{form.branch.id_for_label}}">Branch</label>
+        {{form.branch}}
+  
+      </div>
+
+      <div class="form-group">
+        <label for="{{form.semester.id_for_label}}">Semester</label>
+        {{form.semester}}
+      </div>
+
+      <div class="form-group">
+        <label for="{{form.semester.id_for_label}}">Course</label>
+        {{form.course}}
+      </div>
+        
+      
+      <div class="form-group">
+          <label for="{{form.file_name.id_for_label}}">File Name</label>
+          {{form.file_name}}
+    
+        </div>
+
+
+        <div class="form-group">
+          <label for="{{form.my_file.id_for_label}}">FILE</label>
+          {{form.my_file}}
+        </div>
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+    <br>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{%endblock%}
+
+</div>
+</body>
+</html>

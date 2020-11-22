@@ -1,0 +1,52 @@
+{% extends 'social/index.html' %}
+{%block content%}
+<div class="container mt-5">
+	<br>
+	<div class="row">
+		<div class="col-12">
+
+			<p>
+				<a href="{% url 'dashboard:home' %}" class="btn btn-primary">Home</a>
+			</p>
+
+			<p>
+				<a href="{% url 'social:home' %}" class="btn btn-primary">Upload</a>
+			</p>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th>Sl.No</th>
+						<th>Name</th>
+						<th>Branch</th>
+						<th>Semester</th>
+						<th>Course</th>
+						<th>File Link</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for d in data %}
+
+					<tr>
+
+						<th>{{forloop.counter}}</th>
+						<th>{{d.file_name}}</th>
+						<th>{{d.branch}}</th>
+						<th>{{d.semester}}</th>
+						<th>{{d.course}}</th>
+						<th><a href="{{d.my_file.url}}">{{d.my_file}}</a></th>
+
+						<th>
+							<form method="post" action="{% url 'social:delete_book' d.pk %}">
+								{% csrf_token %}
+								<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+							</form>
+						</th>
+					</tr>
+					{% endfor %}
+			</table>
+			<br>
+		</div>
+	</div>
+</div>
+{%endblock%}
