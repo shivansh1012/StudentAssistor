@@ -116,3 +116,11 @@ def update_profile_view(request):
     return render(request,'dashboardPage/studentform.html',context)
 
 
+def aboutus(request):
+    personal = Personal.objects.get(user=request.user.id)
+    avatar = personal.avatar
+    content={
+        'username':request.user.get_username(),
+        'avatar' : avatar,
+    }
+    return render(request, 'dashboardPage/aboutus.html', content)
