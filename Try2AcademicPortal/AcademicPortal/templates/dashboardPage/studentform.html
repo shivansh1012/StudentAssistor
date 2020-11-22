@@ -16,11 +16,11 @@
         <img id="avatarimage" src="{% static request.user.personal.avatar %}" class="avatar img-circle" height="100" width="100">
         <h6>Select a different avatar...</h6>
         <select name="avatar" id="avatar" class="form-control">
-          <option>Female1</option>
-          <option>Female2</option>
           <option>Male1</option>
           <option>Male2</option>
           <option>Male3</option>
+          <option>Female1</option>
+          <option>Female2</option>
         </select>
         <!--input type="file" class="form-control"-->
       </div>
@@ -69,25 +69,25 @@
           Link should start with <strong>'https://'</strong>. Clear the field if you don't have a link/website
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label">Website:</label>
+          <label class="col-lg-3 control-label">Website:<small style="color: rgb(139, 35, 78);">  (Optional)</small></label>
           <div class="col-lg-8">
             <input class="form-control" name="website" type="text" value="{{request.user.personal.website}}">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label">Githhub Link:</label>
+          <label class="col-lg-3 control-label">Githhub Link:<small style="color: rgb(139, 35, 78);">  (Optional)</small></label>
           <div class="col-lg-8">
             <input class="form-control" name="github" type="text" value="{{request.user.personal.github}}">
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label">LinkedIn:</label>
+          <label class="col-lg-3 control-label">LinkedIn:<small style="color: rgb(139, 35, 78);">  (Optional)</small></label>
           <div class="col-lg-8">
             <input class="form-control" name="linked" type="text" value="{{request.user.personal.linked}}" >
           </div>
         </div>
         <div class="form-group">
-          <label class="col-lg-3 control-label">Bio:</label>
+          <label class="col-lg-3 control-label">Bio:<small style="color: rgb(139, 35, 78);">  (Optional)</small></label>
           <div class="col-lg-8">
             <input class="form-control" name="bio" type="text" value="{{request.user.personal.bio}}">
           </div>
@@ -104,7 +104,7 @@
           <label class="col-lg-3 control-label">Branch:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-                <select name="branch" id="branch" class="form-control input-lg">
+                <select name="branch" id="branch" class="form-control input-lg" required>
                   <option value="">Select Branch</option>
                  </select>
               </select>
@@ -116,7 +116,7 @@
           <label class="col-lg-3 control-label">Semester:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-              <select name="semester" id="semester" class="form-control input-lg">
+              <select name="semester" id="semester" class="form-control input-lg" required>
                 <option value="">Select Semester</option>
                </select>
                  </select>
@@ -129,7 +129,7 @@
           <label class="col-lg-3 control-label">Course 1:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-              <select name="course1" id="course1" class="form-control input-lg">
+              <select name="course1" id="course1" class="form-control input-lg" required>
                 <option value="">Select Course 1</option>
                </select>
               </select>
@@ -141,7 +141,7 @@
           <label class="col-lg-3 control-label">Course 2:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-                <select name="course2" id="course2" class="form-control input-lg">
+                <select name="course2" id="course2" class="form-control input-lg" required>
                 <option value="">Select Course 2</option>
                  </select>
               </select>
@@ -153,7 +153,7 @@
           <label class="col-lg-3 control-label">Course 3:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-              <select name="course3" id="course3" class="form-control input-lg">
+              <select name="course3" id="course3" class="form-control input-lg" required>
                 <option value="">Select Course 3</option>
                </select>
               </select>
@@ -165,7 +165,7 @@
           <label class="col-lg-3 control-label">Course 4:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-              <select name="course4" id="course4" class="form-control input-lg">
+              <select name="course4" id="course4" class="form-control input-lg" required>
                 <option value="">Select Course 4</option>
                </select>
               </select>
@@ -177,7 +177,7 @@
           <label class="col-lg-3 control-label">Course 5:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-              <select name="course5" id="course5" class="form-control input-lg">
+              <select name="course5" id="course5" class="form-control input-lg" required>
                 <option value="">Select Course 5</option>
                </select>
               </select>
@@ -189,7 +189,7 @@
           <label class="col-lg-3 control-label">Course 6:</label>
           <div class="col-lg-8">
             <div class="ui-select">
-              <select name="course6" id="course6" class="form-control input-lg">
+              <select name="course6" id="course6" class="form-control input-lg" required>
                 <option value="">Select Course 6</option>
                </select>
               </select>

@@ -32,6 +32,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('fileupload/',include('fileuploadapp.urls')),
+
+    path('social/',include('social.urls'))
     
 ]
 
