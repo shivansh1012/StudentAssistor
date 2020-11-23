@@ -77,7 +77,12 @@
           </div>
         </div>
 
-
+        {% url 'dashboard:home' as home %}
+        {% url 'calendarapp:calendar' as calendar1 %}
+        {% url 'todoapp:list' as todo %}
+        {% url 'fileuploadapp:upload' as upload %}
+        {% url 'dashboard:profile' as profile %}
+        {% url 'dashboard:aboutus' as aboutus %}
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -85,7 +90,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
-              <a href="{% url 'dashboard:home' %}" class="nav-link active">
+              <a href="{% url 'dashboard:home' %}" class="nav-link {% if request.path == home %} active {% endif %}">
                 <i class="nav-icon fas fa-home"></i>
                 <p>
                   HOME
@@ -95,7 +100,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="{% url 'calendarapp:calendar' %}" class="nav-link">
+              <a href="{% url 'calendarapp:calendar' %}" class="nav-link {% if request.path == calendar1 %} active {% endif %}">
                 <i class="nav-icon fas fa-calendar"></i>
                 <p>
                   Calender
@@ -104,7 +109,7 @@
 
             </li>
             <li class="nav-item">
-              <a href="{% url 'todoapp:list' %}" class="nav-link">
+              <a href="{% url 'todoapp:list' %}" class="nav-link {% if request.path == todo %} active {% endif %}">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
                   To-Do List
@@ -113,7 +118,7 @@
 
             </li>
             <li class="nav-item">
-              <a href="{% url 'fileuploadapp:upload'%}" class="nav-link">
+              <a href="{% url 'fileuploadapp:upload'%}" class="nav-link {% if request.path == upload %} active {% endif %}">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Upload File
@@ -131,7 +136,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="{% url 'dashboard:profile'%}" class="nav-link">
+              <a href="{% url 'dashboard:profile'%}" class="nav-link {% if request.path == profile %} active {% endif %}">
                 <i class="nav-icon fa fa-cog"></i>
                 <p>
                   Settings
@@ -149,7 +154,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="/aboutus" class="nav-link ">
+              <a href="/aboutus" class="nav-link {% if request.path == aboutus %} active {% endif %}">
                 <i class="fa fa-users nav-icon"></i>
                 <p>About Us</p>
               </a>
