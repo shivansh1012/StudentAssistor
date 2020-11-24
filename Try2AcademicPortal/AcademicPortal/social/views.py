@@ -32,6 +32,7 @@ def show_file(request):
 
 	return render(request,'social/views.html',context)
 
+@login_required(login_url='login')
 def delete_book(request,pk):
 	if request.method=='POST':
 		book=document_upload.objects.get(pk=pk)

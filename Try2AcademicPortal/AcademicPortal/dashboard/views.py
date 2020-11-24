@@ -68,7 +68,7 @@ def update_profile_view(request):
         json_data = open('static/dist/js/branch_sem_course.json')   
         data = json.load(json_data) # deserialises it
         json_data.close()
-        #data2 = json.dumps(data1)  json formatted string
+
         for info in data:
             if info['id']==branch:
                 branch = info['name']
